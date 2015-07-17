@@ -1,0 +1,539 @@
+@mixin size($width:null, $height:null){
+  widht:$width;
+  height:$height; }
+
+@mixin fonts($style:null, $variant;null, $weight:null, $size:null $family:null){
+  font{
+    style:$style ;
+    variant:$variant ;
+    weight:$weight ;
+    size:$size ;
+    family:$family;} }
+
+.manage-lab-orders {
+ @import size(100%); }
+
+.lab-works {
+  @import size(25%)
+  float: left;
+  min-height: 100%; }
+
+.labtracking-patient-info {
+  @import size(99%,40px);
+  border-bottom: 1px #ccc solid;
+  img {
+    height: 90%; } }
+
+.more-patient-info {
+  display: inline;
+  margin-left: 10px;
+  >* {
+    display: inline;
+    margin-left: 10px; } }
+
+.order-submit {
+  @import size(60%,100%);
+  display: inline-block;
+  float: right;
+  .btn {
+    margin-left: 2%;
+  }
+}
+
+/* left pane */
+.disableDOM {
+  pointer-events: none;
+  opacity: 0.3; }
+
+.lab-works-dropdown {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  .btn {
+    border-radius: 2px 2px 0px 0px;
+    @import size(85px,20px);
+    margin-top: 10px;
+    background: #eee;
+    padding: 5px 10px;
+    border-bottom: none;
+  }
+}
+
+.btn-group > .btn:first-child {
+  border-bottom-left-radius: 0;
+  /*overwriting bootstrap */ }
+
+.horz-line {
+  border-top: 1px solid #ccc; }
+
+.lab-work-types {
+  font-size: 14px;
+  width: 98%;
+  margin-top: 15px;
+  /* border: 1px solid #ccc; */
+  li {
+    padding: 2% 4%;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: #08B;
+    }
+  }
+}
+
+.activeorder {
+  color: #fff;
+  background: #08B;
+}
+
+/* Right pane */
+.order-right-pane {
+  background: #eee;
+  @import size(74%);
+  min-height: 100%;
+  float: left;
+  border-left: 1px solid #ccc; }
+
+.order-error {
+  color: red;
+  font-weight: bold; }
+
+.order-work-type label, .order-labels {
+  cursor: text; }
+
+.margintop_2px {
+  margin-top: 2px; }
+
+.clearboth {
+  @import size(0,0);}
+
+.lab-order-form {
+  float: left;
+  margin: 10px;
+  background: #fff;
+  @import size(97%)
+  border: 1px solid #ccc; }
+
+.order-fixed-fields {
+  @import size(99%,60px);
+  border-bottom: 1px solid #ccc;
+  border-radius: 2px;
+  margin: 5px;
+  div {
+    @import fonts($size:10px,$weight:bold);
+    margin-bottom: 2px;
+    padding-top: 2px;
+  }
+}
+
+.order-job-id {
+  float: left;
+  @import size(28%,68px);
+  padding-left: 2%; }
+
+#job-id {
+  color: #08B;
+  font-size: 14px;
+  padding-top: 5px;
+  @import size(70%)
+  float: left;
+  cursor: pointer; }
+
+#order-received-date {
+  margin-left: 5px;
+  display: inline; }
+
+.lab-name {
+  float: left;
+  @import size(27%)
+  padding-left: 2%; }
+
+.size-color {
+  font-size: 14px;
+  color: #0088bb; }
+
+.lab-name .caret, .doc-name .caret {
+  vertical-align: middle; }
+
+.order-doctor {
+  @import size(72%,40px);
+  position: fixed;
+  bottom: 0%;
+  border-left: 4px solid #08B;
+  background: #fff;
+  font-size: 13px; }
+
+.doc-name .dropdown-toggle a {
+  font-size: 13px; }
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none; }
+
+.vert-line {
+  border-right: 1px solid #ccc;
+  @import size(null,58px);
+  float: left; }
+
+.order-due-date {
+  float: left;
+  width: 25%;
+  padding-left: 2%;
+  input {
+    border: none;
+    color: #0088bb;
+  }
+}
+
+.order-doctor input, #order-received-date input {
+  border: none;
+  color: #0088bb;
+}
+
+.order-due-date input {
+  width: 70%;
+ @import fonts($family:OpenSans,$weight:bold);  
+}
+
+.order-dynamic-fields {
+  padding: 2% 2% 2% 0%;
+  margin-bottom: 20px;
+  float: left;
+  width: 70%;
+  > ul > li {
+    padding: 1% 1% 1% 0%;
+    @import size(100%,100%);
+    display: inline-block;
+    max-height: 30px;
+  }
+  .order-lab-work-name {
+    display: inline-block;
+    margin-left: 1%;
+    @import fonts($weight:bolder,$size:14px);
+  }
+}
+
+.order-tooth-selected, textarea {
+  display: inline-block;
+  margin-left: 1%;
+  @import fonts($weight:bolder,$size:14px);
+}
+
+.order-tooth-selected {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 65%;
+  color: #08B;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.required:after {
+  padding-left: 2px;
+  content: '*';
+  color: #DD334D; }
+
+.order-labels {
+  @import size(150px)
+  text-align: right; }
+
+.dropdown div {
+  margin-left: 1%; }
+
+.addlab-field, .editjob-field {
+  width: 60%;
+  color: #08B; }
+
+.editjob-field {
+  width: 40%; }
+
+.lab-holder {
+  width: 70%; }
+
+.order-toothpicker {
+  margin-left: 25%; }
+
+.order-cancel-tiny {
+  margin-right: 10px;
+  font-weight: lighter; }
+
+.order-job-id .order-error {
+  margin-top: -4px; }
+
+/* Lab orders listing & tracking */
+.add-case {
+  @import size(100%,40px);
+  border-bottom: 1px solid #ccc; }
+
+.order-list {
+  margin-top: 10px;
+}
+
+.order-filters {
+  height: 40px;
+  border: 1px solid #ccc;
+  input {
+    @import size(25%,25%);
+    margin: 5px;
+    border-radius: 2px;
+    padding: 2px 2px 2px 5px;
+  }
+}
+
+.status-filter span {
+  padding: 5px 7px;
+  border-radius: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.date-filter span {
+  padding: 5px 7px;
+  border-radius: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+.order-filters {
+  .due {
+    margin-top: 10px;
+    margin-right: 2%;
+  }
+  .status {
+    margin-right: 4%;
+    margin-top: 10px;
+  }
+}
+
+.stats-txt {
+  @import fonts($weight:bold,$size:11px);
+  margin-right: 10px; }
+
+li.actions {
+  background-image: url('/images/inventory/icons/arrowsmall.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+  &:hover {
+    cursor: pointer;
+    background-position: 23px center;
+  }
+}
+
+textarea {
+  font-weight: normal; }
+
+.status-select .dropdown-toggle {
+  vertical-align: middle;
+}
+
+.status-select .dropdown-menu {
+  top: auto;
+  left: auto;
+  text-align: left;
+}
+
+li.status-select {
+  text-align: right;
+}
+
+.status-select div {
+  div {
+    color: #fff;
+    cursor: pointer;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  span {
+    margin-left: 3px;
+    border-top-color: #fff;
+  }
+}
+
+.orders-list ul:first-child {
+  border-top: 1px solid #ccc; }
+
+.sent-wisteria {
+  background: #8e44ad; }
+
+.each-order {
+  display: block;
+  padding: 10px 0px 10px 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  ul:first-child {
+    margin: 0% 0% 2% 0%;
+  }
+  li {
+    display: inline-block;
+  }
+}
+
+.patient-order li {
+  display: inline-block;
+}
+
+.dropdown-menu li {
+  display: list-item; }
+
+.order-head {
+  @import fonts($weight:bold,$size:11px);
+  color: #777; }
+
+.w-5cent {
+  width: 5%; }
+
+.w-15cent {
+  width: 15%; }
+
+.w-12cent {
+  width: 12%; }
+
+.w-10cent {
+  width: 10%; }
+
+.w-30cent {
+  width: 30%; }
+
+.w-25cent {
+  width: 25%; }
+
+.w-20cent {
+  width: 20%; }
+
+.w-18cent {
+  width: 18%; }
+
+.text-msg {
+  text-align: center;
+  color: #888;
+  @import fonts($size:20px,$style:italic);
+  margin-top: 25%; }
+
+.truncate-name {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.order-fullwidth {
+  width: 100%; }
+
+ul.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto; }
+
+#order-cross {
+  @import fonts($weight:bold,$size:15px);
+  cursor: pointer;
+  color: red;
+  float: right;
+  margin-right: 4px; }
+
+.newloaderoverlay {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.newloader {
+  background: url('/images/newloader.png') center center no-repeat;
+  height: 69px;
+}
+
+#loading-image {
+  position: fixed;
+  left: 0;
+  top: 15px;
+  width: 100%;
+  background-color: transparent;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  padding: 50px;
+  border: none;
+  border-radius: 0;
+  z-index: 100;
+  .loading-image-inner {
+    background: #FFF;
+    width: 25%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 2px;
+  }
+}
+
+.newloader:after {
+  content: '';
+  width: 61px;
+  height: 61px;
+  border-top: 2px solid #EBEBEB;
+  border-right: 2px solid #EBEBEB;
+  border-bottom: 2px solid #3BB9DF;
+  border-left: 2px solid #3BB9DF;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotate360 1.25s linear infinite;
+  -moz-animation: rotate360 1.25s linear infinite;
+  -webkit-animation: rotate360 1.25s linear infinite;
+  -o-animation: rotate360 1.25s linear infinite;
+}
+
+.link-font-color {
+  color: #0088bb;
+  @import fonts($size:12px,$weight:bold);
+  cursor: pointer; }
+ 
+.font-normal {
+  font-weight: normal; }
+
+.appointment-alerts {
+  background-color: #f6d5d5;
+  color: #7e1b1b;
+  border-radius: 5px;
+  opacity: 0.8;
+  height: 100%;
+  display: inline;
+  float: left;
+  padding: 1% 2%; }
+
+.appointments > .each-appointment {
+  padding: 5%;
+  text-align: center; }
+
+.overdue-laborders .order-due-on {
+  color: #c20a0a;
+  font-weight: bold; }
+
+.reduce-width {
+  width: 75%; }
+
+.contact-icon-container {
+  background: #e3e3e3;
+  border: #ddd;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 10px; }
+
+.lab-contact-icon {
+  background: url("/images/v6/contact_icon.png") 4px 13px no-repeat;
+  padding: 10px;
+  cursor: pointer; }
+
+.pr-popover-tooltip .show-more {
+  float: right;
+  color: #23A7D7;
+  cursor: pointer; }
+
+/*# sourceMappingURL=labtracking.scss.map */
